@@ -1,11 +1,15 @@
-body {
+body,html{
     font-family: 'Poppins', serif;
     font-size: 14px;
     background-image: url('/images/temple-bk4.jpg');
-    background-size: 1300px;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
     
-    color: hsl(32, 100%, 78%);
- 
+    color: rgb(243, 237, 226);
+    margin: 0 auto;
   }
   h1{
     text-align: center;
@@ -13,7 +17,8 @@ body {
     color: 
   }
   p{
-    text-align: center
+    text-align: center;
+    font-size: 30px
   }
   h2{
     text-align: center;
@@ -21,7 +26,7 @@ body {
   }
 
 a:link {
-  color: rgb(255, 255, 255);
+  color: rgb(208, 154, 191);
   background-color: transparent;
   text-decoration: none;
 }
@@ -42,7 +47,22 @@ a:active {
   color: rgb(201, 201, 201);
   background-color: transparent;
   text-decoration: underline;
+
 }
-.link-artist{
-    text-align: center;
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
 }
+#bottom1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}
+
+
+
+
+
