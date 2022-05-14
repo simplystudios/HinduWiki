@@ -1,0 +1,39 @@
+body,html{
+    font-family: 'Poppins', serif;
+    font-size: 14px;
+    background-color: black;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+  }
+  h1{
+    text-align: center;
+    font-size: 50px;
+    color: 
+  }
+  p{
+    text-align: center;
+    font-size: 30px
+  }
+  h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    color:  
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: large;
+    color: rgb(221, 160, 63);
+  }
+
+
+
+
+

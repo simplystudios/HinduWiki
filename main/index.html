@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HinduWiki &bull; Wiki </title>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="name" content="HinduWiki &bull; Wiki">
+    <meta name="description" content="Search Anything And Know The History Of It.">
+    <meta name="keywords" content="Temple wiki, indianwiki, hinduwiki, hindu hidtory,google clone, search, coding, wikipedia clone">
+    <meta name="theme-color" content="#101010">
+
+    <meta property="og:title" content="HinduWiki &bull; Wiki">
+    <meta property="og:url" content="https://HinduWiki.ml">
+    <meta property="og:image" content="https://HinduWiki.ml/favicon.ico">
+    <meta property="og:description" content="HinduWiki.ml">
+
+    <link rel="manifest" href="manifest.json">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500">
+</head>
+<body>
+    <script>
+        var example = ['देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा। तथा देहान्तरप्राप्तिर्धीरस्तत्र न मुह्यति॥ २-१३ <hr> english translation : Just as the boyhood, youth and old age come to the embodied Soul in this body, in the same manner, is the attaining of another body; the wise man is not deluded at that.', 'न जायते म्रियते वा कदाचिन् नायं भूत्वा भविता वा न भूयः। अजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे॥ २-२० <hr> english translation : The soul is never born, it never dies having come into being once, it never ceases to be. Unborn, eternal, abiding and primeval, it is not slain when the body is slain.', 'जातस्य हि ध्रुवो मृत्युर्ध्रुवं जन्म मृतस्य च। तस्मादपरिहार्येऽर्थे न त्वं शोचितुमर्हसि॥ २-२७ <hr> english translation : Death is certain for the born, and re-birth is certain for the dead; therefore you should not feel grief for what is inevitable.', 'विहाय कामान्यः सर्वान्पुमांश्चरति निःस्पृहः।निर्ममो निरहङ्कारः स शान्तिमधिगच्छति॥ २-७१ <hr> english translation : That man attains peace who, abandoning all desires, moves about without longing,without the sense of mine and without egoism'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 6000); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
+  
+  <div class="center" id="sequence">
+
+  </div>
+
+
+  </div>
+
+
+</div>
+
+  
+   
+</body>
+<script src="/js/app"></script>
+</html>
