@@ -23,42 +23,35 @@ body,html{
     text-align: center;
     color:  
   }
-
 a:link {
   color: rgb(208, 154, 191);
   background-color: transparent;
   text-decoration: none;
 }
-
 a:visited {
   color: rgb(189, 165, 47);
   background-color: transparent;
   text-decoration: none;
 }
-
 a:hover {
   color: rgb(228, 151, 37);
   background-color: transparent;
   text-decoration: underline;
 }
-
 a:active {
   color: rgb(201, 201, 201);
   background-color: transparent;
   text-decoration: underline;
-
 }
 #bottom {
   position: absolute;
   bottom: 0;
   left: 0;
-
 }
 #bottom1 {
   position: absolute;
   bottom: 0;
   right: 0;
-
 }
 
 
