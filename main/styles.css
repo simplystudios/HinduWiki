@@ -1,7 +1,7 @@
 body,html{
     font-family: 'Poppins', serif;
     font-size: 14px;
-    background-color: black;
+    background-image: url('/images/old_page.jpg');
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,11 +17,12 @@ body,html{
   p{
     text-align: center;
     font-size: 30px
+    
   }
-  h2{
+  p{
     text-align: center;
-    color: rgb(255, 255, 255);
-    color:  
+    color: rgb(167, 120, 45);
+  
   }
   .center {
     margin: 0;
@@ -30,10 +31,18 @@ body,html{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: large;
-    color: rgb(221, 160, 63);
+    color: rgb(188, 130, 37);
   }
-
-
+  #bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #bottom1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 
 
 
