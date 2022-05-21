@@ -9,29 +9,95 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500">
     <style>
-      body {
-        font-family: 'Poppins', serif;
-        font-size: 14px;
-        background-image: url('/images/temple-bk2.jpg');
-        background-position: center;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-        margin: 0 auto;
-      }
-      h1 {text-align: center;}
-      p {text-align: center;}
-      a {text-align: center;}
-      div {text-align: center;}
-      img{align-items: center;}
+
+      body,html{
+    font-family: 'Poppins', serif;
+    font-size: 14px;
+    background-image: url('/images/old_page.jpg');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: rgb(251, 251, 251);
+    margin: 0 auto;
+  }
+  h1{
+    text-align: center;
+    font-size: 50px;
+    color: 
+  }
+  p{
+    text-align: center;
+    font-size: 30px
+    
+  }
+  p{
+    text-align: center;
+    color: rgb(167, 120, 45);
+  
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: large;
+    color: rgb(188, 130, 37);
+  }
+  #bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #bottom1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 
     </style>
 <body>
 </head>
-<h1>404 error page</h1>
 
 
+<style>
+  img {
+    width: 100%;
+  }
+  </style>
+<script>
+  var example = ['देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा। तथा देहान्तरप्राप्तिर्धीरस्तत्र न मुह्यति॥ २-१३ <hr> english translation : Just as the boyhood, youth and old age come to the embodied Soul in this body, in the same manner, is the attaining of another body; the wise man is not deluded at that.', 'न जायते म्रियते वा कदाचिन् नायं भूत्वा भविता वा न भूयः। अजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे॥ २-२० <hr> english translation : The soul is never born, it never dies having come into being once, it never ceases to be. Unborn, eternal, abiding and primeval, it is not slain when the body is slain.', 'जातस्य हि ध्रुवो मृत्युर्ध्रुवं जन्म मृतस्य च। तस्मादपरिहार्येऽर्थे न त्वं शोचितुमर्हसि॥ २-२७ <hr> english translation : Death is certain for the born, and re-birth is certain for the dead; therefore you should not feel grief for what is inevitable.', 'विहाय कामान्यः सर्वान्पुमांश्चरति निःस्पृहः।निर्ममो निरहङ्कारः स शान्तिमधिगच्छति॥ २-७१ <hr> english translation : That man attains peace who, abandoning all desires, moves about without longing,without the sense of mine and without egoism'];
+
+  textSequence(0);
+  function textSequence(i) {
+
+      if (example.length > i) {
+          setTimeout(function() {
+              document.getElementById("sequence").innerHTML = example[i];
+              textSequence(++i);
+          }, 6000); // 1 second (in milliseconds)
+
+      } else if (example.length == i) { // Loop
+          textSequence(0);
+      }
+
+  }
+</script>
+
+<div class="center" id="sequence">
+
+</div>
+<br>
+<p>404 error page</p>
+</div>
+
+
+</div>
+<br>
+<div id="bottom"><p1>Hinduwiki.ml</p1>
+  
+</div>
 
 </body>
 </html>
