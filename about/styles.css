@@ -1,0 +1,176 @@
+body, html {
+  font-family: 'Poppins', serif;
+  font-size: 14px;
+  background-color: rgb(241, 234, 226);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(185, 144, 77);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use min-height instead of height for the body */
+}
+.founders{
+  font-size: 15px;
+}
+.pfp{
+  border-radius: 100px;
+  height: 120px;
+}
+.fyp{
+  flex-shrink: 1;
+}
+.searchimg{
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+.center {
+    font-size: large;
+    color: rgb(185, 144, 77);
+}
+.navbar{
+  background-color: bisque;
+  height: 90px;
+  text-align: center;
+}
+#search{
+    padding: 10px;
+    border-radius: 10px;
+  }
+  input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(148, 125, 97);
+    height: 35px;
+    width: 150px;
+  }
+  button{
+    background-color:bisque;
+    padding: 10px 20px;
+    margin-left: 5px;
+    color: rgb(71, 66, 66);
+    border-radius: 10px;
+    border: 0px;
+    color: rgb(109, 104, 104);
+    cursor:pointer;
+  }
+  .searchbarnav{
+     float: right;
+     vertical-align: middle;
+     text-align: center;
+     padding: 6px;
+     border: none;
+     margin-top: 8px;
+     margin-right: 16px;
+     font-size: 17px;
+     background-color: antiquewhite;
+     border-radius: 10px;
+  }
+  .title{
+    float: left;
+    padding: 14px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    color: rgb(192, 153, 105);
+    display:flex;
+  }
+
+/* Add the following CSS for the footer */
+footer {
+  color: White;
+  position: relative;
+  height: 4em;
+  background-color: bisque;
+  padding: 30px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ab8246;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #ab8246;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  color: #ab8246;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: #67491c;
+}
+
+  
+@media only screen and (max-width:500px){
+  .searchbarnav{
+     padding: 10px;
+     float: center;
+     vertical-align: middle;
+     text-align: center;
+     border: none;
+     margin-top: 8px;
+     display: flex;
+     flex-direction:inherit;
+     align-items: center;
+     justify-content: center;
+     width: 86%;
+     height: 34px;
+  }
+  button{
+    margin-bottom: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: auto;
+  }
+  input{
+    border: none;
+    margin-bottom: 8px;
+    margin-top: auto;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+  }
+  .title{
+    display: none;
+  }
+}
+@media only screen and (max-width:340px){
+  .searchbarnav{
+     padding: 10px;
+     display: flex;
+     flex-direction:inherit;
+     align-items: center;
+     justify-content: center;
+     width: 80%;
+     height: 34px;
+  }
+}

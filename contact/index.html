@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinduwiki &bull; Contact Us</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pgt">HinduWiki &bull; Contact Page</title>
+
+    <meta name="name" content="HinduWiki &bull;  Contact Page">
+    <meta name="description" content="Search Anything And Know The History Of It.">
+    <meta name="keywords" content="Temple wiki, indianwiki, hinduwiki, hindu hidtory,google clone, search, coding, wikipedia clone">
+    <meta name="theme-color" content="#101010">
+
+    <meta property="og:title" content="HinduWiki &bull; Contact">
+    <meta property="og:url" content="https://HinduWiki.ml">
+    <meta property="og:image" content="https://HinduWiki.ml/favicon.ico">
+    <meta property="og:description" content="HinduWiki.ml">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="title">Hinduwiki &bull;  Contact Us</h1>
+        
+        <div class="searchbarnav">
+            <input type="search" id="search-input" type="text" title="Search" name="search-navbar" id="searchnav" placeholder="Type to search...">
+            <button id="search-button">Search</button>
+        </div>
+        <br>
+        <br><br>
+        <br>
+    <div class="container">
+    <h1>Contact Us</h1>
+    <h2>Contact us through this form or email us at devlopers@hinduwiki.ml</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="success-message" class="success-message"></div>
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const successMessage = document.getElementById("success-message");
+    const errorMessage = document.getElementById("error-message");
+
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = contactForm.elements["name"].value;
+      const email = contactForm.elements["email"].value;
+      const message = contactForm.elements["message"].value;
+
+      // Here, you can add your logic to handle form submission,
+      // such as sending an email or storing the data.
+
+      // For this example, we'll just display success message.
+      successMessage.textContent = "Thank you for contacting us!";
+      contactForm.reset();
+    });
+  </script>
+   
+    <footer>
+  <div class="logo">
+    <h1 class="logo">HinduWiki</h1>
+  </div>
+  <nav class="footer-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/404">Articles</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="social-icons">
+  <a href="https://github.com/simplystudios/hinduwiki"><i class="fab fa-github"></i></a>
+  <a href="https://twitter.com/hinduwiki"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+</footer>
+</body>
+</html>
