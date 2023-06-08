@@ -54,7 +54,6 @@ const performSearch = () => {
             // Cache the data
             const dataToCache = { extract, searchtitle, imgrc };
             localStorage.setItem(cacheKey, JSON.stringify(dataToCache));
-            screenshot(extract);
           }
         })
         .catch(error => {
@@ -90,5 +89,4 @@ function tweetf(){
   // Open the tweet URL in a new window
   window.open(tweetURL);
 }
-
 
