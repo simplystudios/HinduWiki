@@ -40,6 +40,7 @@ body,html{
   }
   
   button{
+    cursor: pointer;
     background-color:antiquewhite;
     padding: 10px 20px;
     color: rgb(71, 66, 66);
