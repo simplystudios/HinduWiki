@@ -150,6 +150,7 @@ footer {
     width: 300px;
     text-align: center;
     padding: 10px;
+    margin-bottom: 14px;
   }
   .searchbarnav {
     padding: 10px;
@@ -189,7 +190,7 @@ footer {
 
 @media only screen and (max-width: 340px) {
   .tweetbut{
-    width: 100px;
+    width: 300px;
   }
   .searchbarnav {
     padding: 10px;

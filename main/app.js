@@ -81,7 +81,7 @@ searchInput.addEventListener("keydown", event => {
     searchin();
   }
 });
-function screenshot() {
+const screenshot = () => {
   var tweetText = `Today I found out about \n\n"${Titleex} : ${Descriptionex}"\n\nusing https://hinduwiki.ml/main?${search}`
 
   // Construct the tweet URL
