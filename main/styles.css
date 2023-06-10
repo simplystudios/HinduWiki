@@ -2,7 +2,6 @@ body,
 html {
   font-family: 'Poppins', serif;
   font-size: 14px;
-  background-color: rgb(241, 234, 226);
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,6 +9,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-image: url('/images/noimage.png')
 }
 
 body {
@@ -29,9 +29,28 @@ body {
 }
 
 .center {
+  vertical-align: middle;
   text-align: center;
   font-size: large;
-  color: rgb(185, 144, 77);
+  color: bisque;
+}
+.text{
+  background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 5px solid bisque;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
 }
 .shloks{
   padding: 15px;
@@ -68,6 +87,7 @@ input {
   border: 0px;
 }
 .tweetbut{
+  position: relative;
   padding: 10px 20px;
   margin-left: 5px;
   width: 300px;
@@ -147,6 +167,7 @@ footer {
 
 @media only screen and (max-width: 500px) {
   .tweetbut{
+    vertical-align: middle;
     width: 300px;
     text-align: center;
     padding: 10px;
@@ -190,6 +211,7 @@ footer {
 
 @media only screen and (max-width: 340px) {
   .tweetbut{
+    vertical-align: middle;
     width: 300px;
   }
   .searchbarnav {
