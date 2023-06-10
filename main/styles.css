@@ -3,8 +3,9 @@ html {
   font-family: 'Poppins', serif;
   font-size: 14px;
   text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
@@ -21,6 +22,12 @@ body {
 .fyp {
   flex-shrink: 1;
 }
+.maintext{
+  vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+    color: beige;
+}
 
 .searchimg {
   max-width: 100%;
@@ -32,16 +39,16 @@ body {
   vertical-align: middle;
   text-align: center;
   font-size: large;
-  color: bisque;
+  color: beige;
 }
 .text{
   background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Black w/opacity/see-through */
     color: white;
     font-weight: bold;
-    border: 5px solid bisque;
+    border: 5px solid beige;
     border-radius: 10px;
     position: absolute;
     top: 50%;
@@ -87,15 +94,14 @@ input {
   border: 0px;
 }
 .tweetbut{
-  position: relative;
   padding: 10px 20px;
-  margin-left: 5px;
-  width: 300px;
+  margin-right: 5px;
+  margin-left: auto;
+  width: 400px;
   border: 0px;
   background-color: #1DA1F2;
   color: white;
   border-radius: 6px;
-  margin: 10px;
 }
 
 .searchbarnav {
@@ -167,10 +173,8 @@ footer {
 
 @media only screen and (max-width: 500px) {
   .tweetbut{
-    vertical-align: middle;
-    width: 300px;
+    width: 250px;
     text-align: center;
-    padding: 10px;
     margin-bottom: 14px;
   }
   .searchbarnav {
@@ -211,8 +215,7 @@ footer {
 
 @media only screen and (max-width: 340px) {
   .tweetbut{
-    vertical-align: middle;
-    width: 300px;
+    width: 200px;
   }
   .searchbarnav {
     padding: 10px;
