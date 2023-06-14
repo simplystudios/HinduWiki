@@ -10,7 +10,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-image: url('/images/noimage.png')
+  background-image: url('/images/404.png')
 }
 
 body {
@@ -94,6 +94,7 @@ input {
   border: 0px;
 }
 .tweetbut{
+  cursor: pointer;
   padding: 10px 20px;
   margin-right: 5px;
   margin-left: auto;
@@ -143,6 +144,7 @@ footer {
   color: #ab8246;
   font-size: 20px;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .footer-nav ul {
@@ -168,6 +170,13 @@ footer {
 }
 
 .social-icons a:hover {
+  color: #67491c;
+}
+a {
+  text-decoration: none;
+  color: #ab8246;
+}
+a:hover {
   color: #67491c;
 }
 

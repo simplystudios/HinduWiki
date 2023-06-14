@@ -1,14 +1,100 @@
 body,html{
     font-family: 'Poppins', serif;
     font-size: 14px;
-    background-image: url('/images/temple-bk4.jpg');
     background-position: center;
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     color: #fcedcc;
+    height: 100%;
     margin: 0 auto;
+  }
+  #bottom2{
+    font-size: 15px;
+    color: #f9f7f7;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #000000;
+  }
+  .logo-p{
+    font-size: 13px;
+    margin-right:15px;
+  }
+    footer {
+      color: white;
+      position: relative;
+      height: 4em;
+      background-color: bisque;
+      padding: 30px;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ab8246;
+      font-size: 20px;
+      margin-right: 10px;
+      padding: 0px;
+      font-weight: bold;
+    }
+
+    .footer-nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-nav li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ab8246;
+    }
+
+    .social-icons a {
+      margin-left: 10px;
+      color: #ab8246;
+      font-size: 20px;
+    }
+
+    a:hover {
+      color: #67491c;
+    }
+  .back{
+    background-image: url('/images/temple-bk4.jpg');
+    background-position: center;
+    text-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fcedcc;
+    height: 100%;
+    margin: auto;
+  }
+  .faq{
+    color: #b68a4d;
+  }
+  .faq-p{
+    font-size: 20px;
+    color: #b68a4d;
+  }
+  .Whatsnew{
+    position: relative;
+    margin-top: auto;
+    padding: 10px;
+    background-color: #ffe4c4;
+    border-color: #b68a4d;
+    margin-left: auto;
+    margin-right: auto;
   }
   .title{
     margin-top: auto;
@@ -16,11 +102,12 @@ body,html{
     font-size: 40px;
   }
   .main{
+    margin: auto;
     text-align: center;
-     position: relative;
-    top: 45%;
-    transform: translateY(-50%);
-    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 30%;
   }
   #search{
     background-color: bisque;
@@ -61,50 +148,27 @@ body,html{
     text-align: center;
     color:  
   }
-a:link {
-  color: rgb(208, 154, 191);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(197, 174, 130);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(228, 151, 37);
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: rgb(201, 201, 201);
-  background-color: transparent;
-  text-decoration: underline;
-}
-#bottom {
-  position: absolute;
-  bottom: 5px;
-}
-#bottom1 {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
+  #bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: #a7a196;
+  }
 
 @media only screen and (max-width:500px){
 
-  body,html{
-    font-family: 'Poppins', serif;
-    font-size: 12px;
-    background-image: url('/images/diwali-bk.jpg');
-    background-position: center;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    color: rgb(243, 237, 226);
-    margin: 0 auto;
-  }
+  .back {
+      background-image: url('/images/diwali-bk.jpg');
+      background-position: center;
+      text-align: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fcedcc;
+      height: 100%;
+      margin: auto;
+    }
   #search{
     background-color: bisque;
     padding: 10px;

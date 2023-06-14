@@ -10,7 +10,14 @@ body, html {
   padding: 0;
   height: 100%;
 }
+a {
+  text-decoration: none;
+  color: #ab8246;
+}
 
+a:hover {
+  color: #67491c;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -92,6 +99,7 @@ footer {
   color: #ab8246;
   font-size: 20px;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .footer-nav ul {
