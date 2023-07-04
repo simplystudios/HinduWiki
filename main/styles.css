@@ -1,3 +1,9 @@
+:root {
+  --backcolor: Black;
+  --textcolor: bisque;
+  --mtextcolor: beige;
+  --trascolor: rgba(54, 48, 48, 0.6);
+}
 body,
 html {
   font-family: 'Poppins', serif;
@@ -6,13 +12,28 @@ html {
   background-repeat:no-repeat;
   background-size:cover;
   background-position: center;
-  color: rgb(255, 255, 255);
+  color: var(--textcolor);
   margin: 0;
   padding: 0;
   height: 100%;
-  background-image: url('/images/404.png')
+  background-color: var(--backcolor);
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(203, 183, 183);
+  opacity: 1;
+  /* Firefox */
 }
 
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(203, 183, 183);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(203, 183, 183);
+}
 body {
   display: flex;
   flex-direction: column;
@@ -26,7 +47,7 @@ body {
   vertical-align: middle;
     text-align: center;
     font-size: 30px;
-    color: beige;
+    color: var(--mtextcolor);
 }
 
 .searchimg {
@@ -39,16 +60,16 @@ body {
   vertical-align: middle;
   text-align: center;
   font-size: large;
-  color: beige;
+  color: var(--mtextcolor);
 }
 .text{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(230, 196, 123);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--trascolor);
     /* Black w/opacity/see-through */
     color: white;
     font-weight: bold;
-    border: 5px solid beige;
+    border: 5px solid var(--backcolor);
     border-radius: 10px;
     position: absolute;
     top: 50%;
@@ -61,12 +82,12 @@ body {
 }
 .shloks{
   padding: 15px;
-  background-color:rgb(73, 55, 55);
+  background-color:var(--backcolor);
   color:bisque;
 }
 
 .navbar {
-  background-color: bisque;
+  background-color:transparent;
   height: 90px;
   text-align: center;
 }
@@ -79,19 +100,24 @@ input {
   background-color: transparent;
   border: none;
   outline: none;
-  color: rgb(148, 125, 97);
+  color: white;
   height: 35px;
   width: 150px;
 }
 
 .searchbutton {
   cursor: pointer;
-  background-color: bisque;
+  background-color: var(--backcolor);
   padding: 10px 20px;
   margin-left: 5px;
-  color: rgb(71, 66, 66);
+  color: var(--textcolor);
   border-radius: 10px;
-  border: 0px;
+  border-width: 1px;
+  border-color: var(--textcolor);
+}
+.searchbutton:hover{
+  background-color: beige;
+  color: var(--backcolor);
 }
 .tweetbut{
   cursor: pointer;
@@ -114,17 +140,23 @@ input {
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-  background-color: antiquewhite;
+  background-color: var(--backcolor);
   border-radius: 10px;
 }
 
 .title {
   float: left;
   padding: 14px;
-  margin-top: 8px;
+  margin-top: 0px;
   margin-right: 16px;
+  margin-left: 0%;
   font-size: 17px;
-  color: rgb(192, 153, 105);
+  color: var(--textcolor);
+  background-color: var(--backcolor);
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   display: flex;
 }
 
@@ -132,7 +164,7 @@ footer {
   color: white;
   position: relative;
   height: 4em;
-  background-color: bisque;
+  background-color: var(--backcolor);
   padding: 30px;
   margin-top: auto;
   display: flex;
@@ -141,7 +173,7 @@ footer {
 }
 
 .logo {
-  color: #ab8246;
+  color: var(--textcolor);
   font-size: 20px;
   margin-right: 10px;
   font-weight: bold;
@@ -160,12 +192,12 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  color: #ab8246;
+  color: var(--textcolor);
 }
 
 .social-icons a {
   margin-left: 10px;
-  color: #ab8246;
+  color: var(--textcolor);
   font-size: 20px;
 }
 
@@ -174,7 +206,7 @@ footer {
 }
 a {
   text-decoration: none;
-  color: #ab8246;
+  color: var(--textcolor);
 }
 a:hover {
   color: #67491c;

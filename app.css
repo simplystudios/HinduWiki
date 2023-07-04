@@ -1,3 +1,7 @@
+:root{
+  --backcolor: #00000a;
+}
+
 body,html{
     font-family: 'Poppins', serif;
     font-size: 14px;
@@ -6,19 +10,42 @@ body,html{
     background-repeat: no-repeat;
     background-size: cover;
     color: #fcedcc;
+    background-color: var(--backcolor);
     height: 100%;
     margin: 0 auto;
   }
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background-color: #e5dcd1;
+    }
+  
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: var(--backcolor);
+      border-top-left-radius: 2px;
+      border-top-right-radius:2px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7d6341;
+    }
   #bottom2{
     font-size: 15px;
-    color: #f9f7f7;
+    color: bisque;
     position: absolute;
     text-align: center;
     padding: 10px;
     right: 0px;
     left: 0px;
     bottom: 0px;
-    background-color: #000000;
+    background-color: var(--backcolor);
   }
   .logo-p{
     font-size: 13px;
@@ -28,7 +55,7 @@ body,html{
       color: white;
       position: relative;
       height: 4em;
-      background-color: bisque;
+      background-color: var(--backcolor);
       padding: 30px;
       margin-top: auto;
       display: flex;
@@ -37,7 +64,7 @@ body,html{
     }
 
     .logo {
-      color: #ab8246;
+      color: bisque;
       font-size: 20px;
       margin-right: 10px;
       padding: 0px;
@@ -57,17 +84,17 @@ body,html{
 
     a {
       text-decoration: none;
-      color: #ab8246;
+      color: bisque;
     }
 
     .social-icons a {
       margin-left: 10px;
-      color: #ab8246;
+      color: bisque;
       font-size: 20px;
     }
 
     a:hover {
-      color: #67491c;
+      color: #c29d6c;
     }
   .back{
     background-image: url('/images/temple-bk4.jpg');
@@ -81,11 +108,13 @@ body,html{
     margin: auto;
   }
   .faq{
-    color: #b68a4d;
+    color: var(--backcolor);
+    font-weight: bold;
   }
   .faq-p{
-    font-size: 20px;
-    color: #b68a4d;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--backcolor);
   }
   .Whatsnew{
     position: relative;
@@ -125,14 +154,28 @@ body,html{
     height: 30px;
     outline: none
   }
-  
+  .searchbutton {
+      cursor: pointer;
+      background-color: var(--backcolor);
+      padding: 10px 20px;
+      margin-left: 5px;
+      color: beige;
+      border-radius: 10px;
+      border-width: 1px;
+      border-color: beige;
+    }
   button{
     cursor: pointer;
-    background-color:antiquewhite;
+    background-color:bisque;
     padding: 10px 20px;
-    color: rgb(71, 66, 66);
+    color: var(--backcolor);
+    border-width: 1px;
     border-radius: 10px;
-    border: 0px;
+    border-color: var(--backcolor);
+  }
+  button:hover{
+    background-color: var(--backcolor);
+    color:bisque;
   }
   h1{
     text-align: center;

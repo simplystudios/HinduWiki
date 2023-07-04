@@ -47,7 +47,7 @@ const performSearch = () => {
           } else {
             const { excerpt, title, thumbnail } = response.pages[0];
             const sanitizedExcerpt = excerpt.replace(/<\/?span[^>]*>/g, ""); // Remove <span> tags from excerpt
-            const firstThumbnail = thumbnail.url.replace(/\/\d+px-/g, "/1200px-"); // Update thumbnail quality to 200px // Get the first thumbnail URL
+            const firstThumbnail = thumbnail.url.replace(/\/\d+px-/g, "/800px-"); // Update thumbnail quality to 200px // Get the first thumbnail URL
             Container.textContent = sanitizedExcerpt;
             Titlecontain.textContent = title;
             document.body.style.backgroundImage = `url('${firstThumbnail}')`;

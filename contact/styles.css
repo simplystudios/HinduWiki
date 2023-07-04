@@ -1,7 +1,12 @@
+:root{
+  --backcolor: black;
+  --mbackcolor:bisque;
+  --trascolor: rgba(54, 48, 48, 0.6);
+}
 body, html {
   font-family: 'Poppins', serif;
   font-size: 14px;
-  background-color: rgb(241, 234, 226);
+  background-color:var(--backcolor);
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +17,7 @@ body, html {
 }
 a {
   text-decoration: none;
-  color: #ab8246;
+  color: beige;
 }
 
 a:hover {
@@ -33,10 +38,10 @@ body {
 }
 .center {
     font-size: large;
-    color: rgb(185, 144, 77);
+    color: beige;
 }
 .navbar{
-  background-color: bisque;
+  background-color: transparent;
   height: 90px;
   text-align: center;
 }
@@ -48,17 +53,23 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
-    color: rgb(148, 125, 97);
+    color: beige;
     height: 35px;
     width: 150px;
   }
   button{
-    background-color:bisque;
-    padding: 10px 20px;
-    margin-left: 5px;
-    color: rgb(71, 66, 66);
-    border-radius: 10px;
-    border: 0px;
+    cursor: pointer;
+      background-color: var(--backcolor);
+      padding: 10px 20px;
+      margin-left: 5px;
+      color: var(--mbackcolor);
+      border-radius: 10px;
+      border-width: 1px;
+      border-color: var(--textcolor);
+  }
+  button:hover{
+    background-color: var(--mbackcolor);
+    color: var(--trascolor);
   }
   .searchbarnav{
      float: right;
@@ -69,25 +80,31 @@ body {
      margin-top: 8px;
      margin-right: 16px;
      font-size: 17px;
-     background-color: antiquewhite;
+     background-color: var(--trascolor);
      border-radius: 10px;
   }
-  .title{
-    float: left;
-    padding: 14px;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-    color: rgb(192, 153, 105);
-    display:flex;
-  }
+    .title {
+      float: left;
+      padding: 14px;
+      margin-top: 0px;
+      margin-right: 16px;
+      margin-left: 0%;
+      font-size: 17px;
+      color: var(--mbackcolor);
+      background-color: var(--trascolor);
+      border-radius: 10px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      display: flex;
+    }
 
 /* Add the following CSS for the footer */
 footer {
   color: White;
   position: relative;
   height: 4em;
-  background-color: bisque;
+  background-color: var(--backcolor);
   padding: 30px;
   margin-top: auto;
   display: flex;
@@ -115,12 +132,12 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  color: #ab8246;
+  color: beige;
 }
 
 .social-icons a {
   margin-left: 10px;
-  color: #ab8246;
+  color: beige;
   font-size: 20px;
 }
 
@@ -132,7 +149,8 @@ footer {
       max-width: 800px;
       margin: 0 auto;
       padding: 40px;
-      background-color: bisque;
+      color: bisque;
+      background-color: var(--trascolor);
       box-sizing: border-box;
       border-radius: 10px;
       margin-top: 50px;
@@ -162,9 +180,9 @@ footer {
 
     input[type="submit"] {
       text-align: center;
-      background-color: #cda972;
+      background-color: beige;
       border-radius: 10px;
-      color: white;
+      color: var(--trascolor);
       border: none;
       width: 200px;
       height: 40px;
@@ -174,7 +192,8 @@ footer {
     }
 
     input[type="submit"]:hover {
-      background-color: #8c643a;
+      color: white;
+      background-color: bisque;
     }
 
     .success-message {

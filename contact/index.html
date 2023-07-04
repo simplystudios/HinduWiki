@@ -10,6 +10,7 @@
 
       gtag('config', 'G-5K8P3PX7M5');
     </script>
+    <script src="app.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,9 +51,8 @@
     <h1>Contact Us</h1>
     <h2>Contact us through this form or email us at devlopers@hinduwiki.ml</h2>
     <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="text" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="name" placeholder="Your Query Title..." required>
+      <textarea name="message" placeholder="Your Query..." required></textarea>
       <input type="submit" value="Submit">
     </form>
     <div id="success-message" class="success-message"></div>
@@ -61,24 +61,24 @@
 
   <script>
     const contactForm = document.getElementById("contact-form");
-    const successMessage = document.getElementById("success-message");
-    const errorMessage = document.getElementById("error-message");
 
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = contactForm.elements["name"].value;
-      const email = contactForm.elements["email"].value;
-      const message = contactForm.elements["message"].value;
+      contactForm.addEventListener("submit", event => {
+        event.preventDefault();
 
-      // Here, you can add your logic to handle form submission,
-      // such as sending an email or storing the data.
+        const title = contactForm.elements["name"].value;
+        const message = contactForm.elements["message"].value;
+        const mail = `devlopers@hinduwiki.ml`
 
-      // For this example, we'll just display success message.
-      successMessage.textContent = "Thank you for contacting us!";
-      contactForm.reset();
-    });
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(mail)}&su=${encodeURIComponent(title)}&body=${encodeURIComponent(message)}`;
+        window.open(gmailUrl, "_blank");
+
+        // Display success message or perform other logic here
+        const successMessage = document.getElementById("success-message");
+        successMessage.textContent = "Thank you for contacting us!";
+        contactForm.reset();
+      });
+
   </script>
-   
     <footer>
   <div class="logo">
     <a href="/" logo">HinduWiki</a>
