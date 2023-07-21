@@ -97,7 +97,7 @@ body,html{
       color: #c29d6c;
     }
   .back{
-    background-image: url('/images/temple-bk4.jpg');
+    background-image: url('./images/temple-bk4.jpg');
     background-position: center;
     text-align: center;
     align-items: center;

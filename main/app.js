@@ -45,7 +45,12 @@ const performSearch = () => {
             Container.textContent = response.error;
             Ogdesc.textContent = response.error;
           } else {
-            const { excerpt, title, thumbnail } = response.pages[0];
+            const page = () =>{
+              if (response.includes(search)){
+                page = '1'
+              }
+            }
+            const { excerpt, title, thumbnail } = response.pages[2];
             const sanitizedExcerpt = excerpt.replace(/<\/?span[^>]*>/g, ""); // Remove <span> tags from excerpt
             const firstThumbnail = thumbnail.url.replace(/\/\d+px-/g, "/800px-"); // Update thumbnail quality to 200px // Get the first thumbnail URL
             Container.textContent = sanitizedExcerpt;
