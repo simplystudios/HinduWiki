@@ -10,7 +10,7 @@ const Background = document.getElementById("result")
 const searchin = () => {
   const searchText = searchInput.value;
   if (searchText.trim() !== "") {
-    const url = `./main?${encodeURIComponent(searchText)}`;
+    const url = `/main?${encodeURIComponent(searchText)}`;
     window.location.href = url;
   }
 };

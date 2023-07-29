@@ -4,7 +4,7 @@ const searchInput = document.getElementById("searchbar");
 const performSearch = () => {
   const searchText = searchInput.value;
   if (searchText.trim() !== "") {
-    const url = `/main?${encodeURIComponent(searchText)}`;
+    const url = `./main?${encodeURIComponent(searchText)}`;
     window.location.href = url;
   }
 };
