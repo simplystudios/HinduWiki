@@ -2,18 +2,18 @@
   "name": "Hinduwiki",
   "short_name": "Hinduwiki",
   "description": "Hinduwiki is an online encyclopedia and knowledge repository dedicated to providing comprehensive information about Hinduism, its philosophy, scriptures, rituals, deities, festivals, and various aspects of Hindu culture and traditions. It serves as a valuable resource for individuals seeking to explore and understand the rich heritage and practices of Hinduism.Hinduwiki is an online encyclopedia and knowledge repository dedicated to providing comprehensive information about Hinduism, its philosophy, scriptures, rituals, deities, festivals, and various aspects of Hindu culture and traditions. It serves as a valuable resource for individuals seeking to explore and understand the rich heritage and practices of Hinduism.",
-  "start_url": "https://hinduwiki.ml/",
+  "start_url": "https://simplystudios.github.io/HinduWiki",
   "display": "standalone",
   "theme_color": "#ffe4c4",
   "background_color": "#ffe4c4",
   "icons": [
     {
-      "src": "/images/app_icon-192x912.png",
+      "src": "./images/app_icon-192x912.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/app_icon-512x512.png",
+      "src": "./images/app_icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
