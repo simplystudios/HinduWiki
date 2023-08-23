@@ -1,7 +1,7 @@
 # Hinduwiki
-Hinduwiki is a web based search engine like tool for hinduism and realted things with hinduwiki can search for anything from rituals - temples - deities - historical figures - resources and more... Try it yourself at https://simplystudios.github.io/HinduWiki
+Hinduwiki is a web based search engine like tool for hinduism and realted things with hinduwiki can search for anything from rituals - temples - deities - historical figures - resources and more... Try it yourself at https://hinduwiki.vercel.app/
 # How to use
-simply go to https://simplystudios.github.io/HinduWiki and type you query and it would give you a result in less than a second with pleasent ui and a button to even tweet what you found out...
+simply go to https://hinduwiki.vercel.app/ and type you query and it would give you a result in less than a second with pleasent ui and a button to even tweet what you found out...
 # Images
 <img width="960" alt="image" src="https://github.com/simplystudios/HinduWiki/assets/76025286/0a41b354-6c70-4bdf-8146-923208bcbd40">
 <img width="960" alt="image" src="https://github.com/simplystudios/HinduWiki/assets/76025286/f069fab2-f832-4457-b7cd-98816d73039c">
