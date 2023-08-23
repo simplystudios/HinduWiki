@@ -4,6 +4,7 @@ const searchButton = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
 const Imagecontain = document.getElementById("img")
 const Pagetitle = document.getElementById("pgt");
+const pagett = document.getElementById("pgtt");
 const Ogdesc = document.getElementById("desc")
 const Background = document.getElementById("result")
 
@@ -15,8 +16,10 @@ const searchin = () => {
   }
 };
 
+
+
 const search = window.location.search.substr(1);
-const apiurl = `https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism-${search}&limit=3`;
+const apiurl = `https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20${search}&limit=5`;
 let Descriptionex;
 let Titleex
 let Imageex
@@ -37,7 +40,6 @@ const performSearch = () => {
       Titleex = title;
       Imageex = thumbnail.url;
     } else {
-      Pagetitle.textContent = `Hinduwiki • ${search}`; // Set the page title
       fetch(apiurl)
         .then(response => response.json())
         .then(response => {
@@ -50,11 +52,13 @@ const performSearch = () => {
                 page = '1'
               }
             }
-            const { excerpt, title, thumbnail } = response.pages[2];
+            const { excerpt, title, thumbnail } = response.pages[0];
             const sanitizedExcerpt = excerpt.replace(/<\/?span[^>]*>/g, ""); // Remove <span> tags from excerpt
             const firstThumbnail = thumbnail.url.replace(/\/\d+px-/g, "/800px-"); // Update thumbnail quality to 200px // Get the first thumbnail URL
             Container.textContent = sanitizedExcerpt;
             Titlecontain.textContent = title;
+            pagett.textContent = `Hinduwiki • ${title}`; // Set the page title
+            Pagetitle.textContent = `Hinduwiki • ${title}`; // Set the page title
             document.body.style.backgroundImage = `url('${firstThumbnail}')`;
             Ogdesc.textContent = sanitizedExcerpt;
             Descriptionex = sanitizedExcerpt;

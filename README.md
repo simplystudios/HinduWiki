@@ -12,3 +12,6 @@ simply go to https://simplystudios.github.io/HinduWiki and type you query and it
 
 <img width="229" alt="image" src="https://github.com/simplystudios/HinduWiki/assets/76025286/02d3a93d-29d4-4031-a369-ebf609617f88">
 <img width="230" alt="image" src="https://github.com/simplystudios/HinduWiki/assets/76025286/5ad89075-3ede-438b-90d8-0b810f1348ce">
+
+# Licence
+GPL - 3
