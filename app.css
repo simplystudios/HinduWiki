@@ -92,10 +92,33 @@ body,html{
       color: bisque;
       font-size: 20px;
     }
+    .sup{
+      background-color: #000000;
+      color: bisque;
+      
+    }
 
+    .sup:hover{
+      background-color: #7d6341;
+    }
     a:hover {
       color: #c29d6c;
     }
+        .top {
+          float: left;
+          padding: 14px;
+          margin-top: 0px;
+          margin-right: 16px;
+          margin-left: 0%;
+          font-size: 14px;
+          color: var(--textcolor);
+          background-color: var(--backcolor);
+          border-radius: 10px;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          display: flex;
+        }
   .back{
     background-image: url('./images/temple-bk4.jpg');
     background-position: center;
