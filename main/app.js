@@ -7,6 +7,8 @@ const Pagetitle = document.getElementById("pgt");
 const pagett = document.getElementById("pgtt");
 const Ogdesc = document.getElementById("desc")
 const Background = document.getElementById("result")
+const Moji = document.getElementById("emoji")
+const Mojitxt = document.getElementById("twe")
 
 const searchin = () => {
   const searchText = searchInput.value;
@@ -23,9 +25,9 @@ const apiurl = `https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20
 let Descriptionex;
 let Titleex
 let Imageex
-const performSearch = () => {
+const performSearch = (api) => {
   if (search) { // Check if search variable is not empty
-    const cacheKey = `hinduwiki_cache_${search}_${Date.now}`;
+    const cacheKey = `hinduwiki_cachedata_${search}_${Date.now}`;
     const cachedData = localStorage.getItem(cacheKey);
 
     if (cachedData) {
@@ -40,7 +42,7 @@ const performSearch = () => {
       Titleex = title;
       Imageex = thumbnail.url;
     } else {
-      fetch(apiurl)
+      fetch(api)
         .then(response => response.json())
         .then(response => {
           if (response.error) {
@@ -75,19 +77,24 @@ const performSearch = () => {
           Ogdesc.textContent = `No Articles Found With The Term '${search}'`;
           Container.textContent = `No Articles Found With The Term '${search}'`;
           Titlecontain.textContent = `An Error Occurred While Searching. Error Code: 2`;
-          console.error(error);
+          Mojitxt.innerHTML = `<i id="emoji" class="fa fa-dice"></i> Random Article`;
+          // Mojitxt.onclick = performSearch(`https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20bhagwat-gita&limit=5`);;
+          
         });
     }
   } else {
     Titlecontain.textContent = "Error Code: 1";
     Container.textContent = "Please Specify A Search Term In The URL In This Format: hinduwiki.ml/main?{your search term}";
     Ogdesc.textContent = "Please Specify A Search Term In The URL In This Format: hinduwiki.ml/main?{your search term}";
+    Mojitxt.innerHTML = `<i id="emoji" class="fa fa-dice"></i>  Random Article`;
+          // Mojitxt.onclick = performSearch(`https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20bhagwat-gita&limit=5`);;
+          
   }
 };
 
 
 
-performSearch();
+performSearch(apiurl);
 
 searchButton.addEventListener("click", searchin);
 
@@ -98,7 +105,7 @@ searchInput.addEventListener("keydown", event => {
   }
 });
 function tweetf(){
-  var tweetText = `Today I found out about \n\n"${Titleex} : ${Descriptionex}"\n\nusing https://hinduwiki.ml/main?${search}`
+  var tweetText = `Today I found out about \n\n"${Titleex} : ${Descriptionex}"\nusing @hinduwiki\n https://hinduwiki.vercel.app/main?${search}`
 
   // Construct the tweet URL
   var tweetURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
