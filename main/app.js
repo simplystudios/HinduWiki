@@ -9,6 +9,42 @@ const Ogdesc = document.getElementById("desc")
 const Background = document.getElementById("result")
 const Moji = document.getElementById("emoji")
 const Mojitxt = document.getElementById("twe")
+const hinduismRelated = [
+  "Lord Shiva",
+  "Kashi Vishwanath Temple",
+  "Ganesha",
+  "Siddhivinayak Temple",-
+  "Lord Vishnu",
+  "Tirupati Balaji Temple",
+  "Goddess Lakshmi",
+  "Vaishno Devi Temple",
+  "Lord Krishna",
+  "Iskcon Temple",
+  "Goddess Durga",
+  "Kolkata Kalighat Temple",
+  "Lord Rama",
+  "Ayodhya Ram Janmabhoomi Temple",
+  "Lord Hanuman",
+  "Hanuman Temple, New Delhi",
+  "Lord Brahma",
+  "Pushkar Brahma Temple",
+  "Goddess Saraswati",
+  "Saraswati Temple, Basar",
+  "Diwali Festival",
+  "Holi Festival",
+  "Ganesh Chaturthi",
+  "Navratri Festival",
+  "Aarti",
+  "Maha Shivaratri",
+  "Pooja",
+  "Ganga Aarti",
+  "Raksha Bandhan",
+  "Yoga and Meditation",
+  "Varanasi Ghats",
+  "Kumbh Mela"
+];
+
+var randomNumber = Math.floor(Math.random()*hinduismRelated.length);
 
 const searchin = () => {
   const searchText = searchInput.value;
@@ -25,7 +61,7 @@ const apiurl = `https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20
 let Descriptionex;
 let Titleex
 let Imageex
-const performSearch = (api) => {
+const performSearch = (api) =>{
   if (search) { // Check if search variable is not empty
     const cacheKey = `hinduwiki_cachedata_${search}_${Date.now}`;
     const cachedData = localStorage.getItem(cacheKey);
@@ -41,6 +77,8 @@ const performSearch = (api) => {
       Descriptionex = sanitizedExcerpt;
       Titleex = title;
       Imageex = thumbnail.url;
+
+
     } else {
       fetch(api)
         .then(response => response.json())
@@ -67,7 +105,6 @@ const performSearch = (api) => {
             Titleex = title;
             Imageex = thumbnail.url;
 
-
             // Cache the data
             const dataToCache = { pages: [{ excerpt: sanitizedExcerpt, title, thumbnail }] };
             localStorage.setItem(cacheKey, JSON.stringify(dataToCache));
@@ -77,9 +114,8 @@ const performSearch = (api) => {
           Ogdesc.textContent = `No Articles Found With The Term '${search}'`;
           Container.textContent = `No Articles Found With The Term '${search}'`;
           Titlecontain.textContent = `An Error Occurred While Searching. Error Code: 2`;
-          Mojitxt.innerHTML = `<i id="emoji" class="fa fa-dice"></i> Random Article`;
-          // Mojitxt.onclick = performSearch(`https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20bhagwat-gita&limit=5`);;
-          
+          Mojitxt.innerHTML = `<i id="emoji" class="fa fa-dice"></i>  Random Article`;
+          Mojitxt.setAttribute( "onClick", "javascript: randomarticle();" );
         });
     }
   } else {
@@ -87,7 +123,7 @@ const performSearch = (api) => {
     Container.textContent = "Please Specify A Search Term In The URL In This Format: hinduwiki.ml/main?{your search term}";
     Ogdesc.textContent = "Please Specify A Search Term In The URL In This Format: hinduwiki.ml/main?{your search term}";
     Mojitxt.innerHTML = `<i id="emoji" class="fa fa-dice"></i>  Random Article`;
-          // Mojitxt.onclick = performSearch(`https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20bhagwat-gita&limit=5`);;
+    Mojitxt.setAttribute( "onClick", "javascript: randomarticle();" );
           
   }
 };
@@ -104,6 +140,13 @@ searchInput.addEventListener("keydown", event => {
     searchin();
   }
 });
+
+function randomarticle(){
+  performSearch(`https://en.wikipedia.org/w/rest.php/v1/search/page?q=hinduism%20${hinduismRelated[randomNumber]}&limit=5`);
+  Mojitxt.setAttribute( "onClick", "javascript: tweetf();" );
+  Mojitxt.innerHTML = `<i id="emoji" class="fa-brands fa-x-twitter"></i> Tweet `;
+}
+
 function tweetf(){
   var tweetText = `Today I found out about \n\n"${Titleex} : ${Descriptionex}"\nusing @hinduwiki\n https://hinduwiki.vercel.app/main?${search}`
 

@@ -23,8 +23,13 @@
 
     <meta property="og:title" content="HinduWiki &bull; Wiki">
     <meta property="og:url" content="https://hinduwiki.vercel.app">
-    <meta property="og:image" content="/images/icon.jpg">
+    <meta property="og:image" content="https://hinduwiki.vercel.app/images/icon.jpg">
     <meta property="og:description" content="Wiki For Hinduism Search About Hinduism And More!!">
+
+    <meta name="twitter:title" content="HinduWiki &bull; Wiki">
+    <meta name="twitter:description" content="Dive into the vast sea of hinduism related knowledge">
+    <meta name="twitter:image" content="https://hinduwiki.vercel.app/images/twittercard.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="manifest" href="manifest.json">
     <script src="https://kit.fontawesome.com/b2b2c57f30.js" crossorigin="anonymous"></script>
@@ -33,23 +38,209 @@
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500">
 </head>
 <body>
+  <script type="module">
+    import { autocomp } from './autocomplete.min.js';
+
+    document.querySelectorAll("searchbar").forEach((el) => { el.value = ""; });
+    const WORDS = [
+        "Lord Shiva",
+        "Kashi Vishwanath Temple",
+        "Ganesha",
+        "Siddhivinayak Temple",
+        "Lord Vishnu",
+        "Tirupati Balaji Temple",
+        "Goddess Lakshmi",
+        "Vaishno Devi Temple",
+        "Lord Krishna",
+        "Iskcon Temple",
+        "Goddess Durga",
+        "Kolkata Kalighat Temple",
+        "Lord Rama",
+        "Ayodhya Ram Janmabhoomi Temple",
+        "Lord Hanuman",
+        "Hanuman Temple, New Delhi",
+        "Lord Brahma",
+        "Pushkar Brahma Temple",
+        "Goddess Saraswati",
+        "Saraswati Temple, Basar",
+        "Diwali Festival",
+        "Holi Festival",
+        "Ganesh Chaturthi",
+        "Navratri Festival",
+        "Aarti",
+        "Maha Shivaratri",
+        "Pooja",
+        "Ganga Aarti",
+        "Raksha Bandhan",
+        "Yoga and Meditation",
+        "Varanasi Ghats",
+        "Kumbh Mela",
+        "Hinduism",
+        "Bhagavad Gita",
+        "Ramayana",
+        "Mahabharata",
+        "Vedas",
+        "Upanishads",
+        "Brahman",
+        "Karma",
+        "Dharma",
+        "Samsara",
+        "Yoga Sutras",
+        "Bhakti",
+        "Moksha",
+        "Hindu Temples",
+        "Ayurveda",
+        "Holi Festival",
+        "Navratri Festival",
+        "Dussehra",
+        "Krishna Janmashtami",
+        "Ganga River",
+        "Kailash Mansarovar",
+        "Amarnath Yatra",
+        "Char Dham Yatra",
+        "Hindu Mythology",
+        "Hindu Deities",
+        "Rigveda",
+        "Yajurveda",
+        "Samaveda",
+        "Atharvaveda",
+        "Hindu Philosophy",
+        "Sanskrit",
+        "Hindu Scriptures",
+        "Vedanta",
+        "Shaivism",
+        "Vaishnavism",
+        "Shaktism",
+        "Ramanuja",
+        "Adi Shankaracharya",
+        "Swami Vivekananda",
+        "Ramakrishna Paramahamsa",
+        "Sri Aurobindo",
+        "Paramahansa Yogananda",
+        "Hare Krishna Movement",
+        "Kumbh Mela",
+        "Haridwar",
+        "Rishikesh",
+        "Varanasi",
+        "Pashupatinath Temple",
+        "Tiruvannamalai",
+        "Jagannath Temple",
+        "Akshardham Temple",
+        "Lotus Temple",
+        "Vaishno Devi",
+        "Meenakshi Temple",
+        "Somnath Temple",
+        "Badrinath Temple",
+        "Kedarnath Temple",
+        "Kashi Vishwanath Corridor",
+        "Brihadeeswarar Temple",
+        "Rameswaram Temple",
+        "Kamakhya Temple",
+        "Birla Mandir",
+        "Chardham Yatra",
+        "Pilgrimage in Hinduism",
+        "Ashram",
+        "Sadhguru",
+        "Art of Living",
+        "Chinmaya Mission",
+        "ISKCON",
+        "Transcendental Meditation",
+        "Sri Sri Ravi Shankar",
+        "Swami Sivananda",
+        "Ramana Maharshi",
+        "Sathya Sai Baba",
+        "Yogananda Paramahansa",
+        "America",
+        "Europe",
+        "Asia",
+        "Africa",
+        "Australia",
+        "Caribbean",
+        "South America",
+        "Southeast Asia",
+        "India",
+        "Yoga",];
+
+
+    // Example 1.
+    // Simple string results.
+    autocomp(document.querySelector("#searchbar"), {
+      onQuery: async (val) => {
+        // This callback returns an array of search results.
+        // Typically, this will be a server side fetch() request.
+        // Example:
+        // 		const resp = await fetch(`/search?q=${query}`);
+        // 		const res = await response.json();  
+        //		return res;
+
+        const q = val.trim().toLowerCase();
+        return WORDS.filter(s => s.toLowerCase().includes(q)).slice(0, 10);
+      },
+
+
+      onSelect: (val) => {
+        document.querySelector("#searchbar").innerText = val;
+
+        // Whatever is returned here is set in the input box.
+        return val;
+      }
+    });
+
+
+    // Example 2.
+    // Object results and HTML rendering.
+    autocomp(document.querySelector("#searchbar"), {
+      onQuery: async (val) => {
+        const q = val.trim().toLowerCase();
+        const out = WORDS.filter(s => s.startsWith(q)).slice(0, 10);
+
+        // Results are objects:
+        // [{fruit: "apple", color: "..", emoji: ".."} ...]
+        return out.map(w => ({
+          fruit: w,
+          color: COLORS[Math.floor(Math.random() * COLORS.length)],
+          emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
+        }))
+      },
+
+      onSelect: (o) => {
+        console.log("good")
+        // Whatever is returned here is set in the input box.
+        return o.fruit;
+      },
+
+      // If this callback is set, every search item (string or object) is passed to this function and its return
+      // value (DOMNode), is appended to the results box.
+      onRender: (o) => {
+        const dot = document.createElement("span");
+        dot.style = `width: 15px; height: 15px; border-radius: 100%; display: inline-block; margin-right: 10px; float: right; background: #000000`;
+
+        const d = document.createElement("span");
+        d.appendChild(dot);
+        d.appendChild(document.createTextNode(o.emoji + " "));
+        d.appendChild(document.createTextNode(o.fruit));
+
+        return d;
+      }
+    });
+  </script>
 <div class="back">
   <div class="main">
     <h2 class="title">HinduWiki</h2>
     <br>
     <div id="search">
       <input id="searchbar" type="text" placeholder="Type To Search..">
-      <button id="searchbutton">Search</button>
+      <button onclick="getvalue()" id="searchbutton">Search</button>
     </div>
-    <!-- <div class="random">
+     <div class="random">
       <br>
     
-      <button class="sup">
+      <button id="randomize" onclick="randomarticle()" class="sup">
         <i class="fa fa-dice">
         </i>
         Surprise Me
       </button>
-    </div> -->
+    </div>
     
   </div>
 </div>
@@ -92,5 +283,5 @@
 
 </body>
 
-<script src="./search.js"></script>
+<script src="/search.js"></script>
 </html>

@@ -221,6 +221,31 @@ body,html{
     right: 0px;
     color: #a7a196;
   }
+.autocomp {
+  background: var(--backcolor);
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #000000;
+  border-top: 0;
+  box-shadow: 2px 2px 2px #000000;
+  text-align: left;
+  scroll-behavior:auto;
+}
+
+.autocomp-item {
+  padding-bottom: 5px;
+  color: var(--textcolor);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomp-item:hover,
+.autocomp-sel {
+  border: 1px solid #0e0c0c;
+  border-radius: 0 0 5px 5px;
+  background: #fcedcc;
+  color: var(--backcolor);
+  font-weight: bold;
+}
 
 @media only screen and (max-width:500px){
 
@@ -235,6 +260,12 @@ body,html{
       height: 100%;
       margin: auto;
     }
+    .sup {
+          margin-top:20%;
+          width: 170px;
+          height: 50px;
+    }
+
   #search{
     background-color: bisque;
     padding: 10px;
